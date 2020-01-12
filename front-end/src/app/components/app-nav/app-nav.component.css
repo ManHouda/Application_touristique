@@ -1,0 +1,42 @@
+.nav-link:hover, .dropbtn:hover {
+  transition: 0.3s;
+}
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button{
+  background: none;
+	color: inherit;
+	border: none;
+	
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

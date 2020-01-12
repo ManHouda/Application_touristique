@@ -1,0 +1,103 @@
+<div class="container">
+      <!--Carousel title paragraphe-->
+      <h2 class="font-weight-bold text-center my-5" id="head">{{ monument.ville }}</h2>
+    
+      <p class="text-center dark-grey-text mx-auto mb-5" id="text">
+        Située entre les montagnes du Rif et la mer Méditerranée, 
+        la ville d’Al Hoceïma est l’une des plus belles stations balnéaires du Maroc
+        et de l’Afrique du Nord. Communément appelée la « Perle de la Méditerranée »,
+        Al Hoceïma a été victime de plusieurs séismes par le passé qui l’ont fait connaître,
+        Notre equipe vous propose donc de redécouvrir cette ville sous son plus bel angle : 
+        entre plages et montagnes, destination Al Hoceïma.
+      </p>
+      
+      <!--slides-->
+      <div class="col-md-10 " id_="slidee">
+          <div id="slides" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+              <li data-target="#slides" data-slide-to="0" class="active"></li>
+              <li data-target="#slides" data-slide-to="1"></li>
+              <li data-target="#slides" data-slide-to="2"></li>
+              <li data-target="#slides" data-slide-to="3"></li>
+            </ol>
+            <!--/.Indicators-->
+     
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img class="d-block w-100" [src]="simg1" alt="First slide">
+                        <div class="mask rgba-black-light"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="">Meilleur plage d'alhoceima bienvenue chez nous </h3>
+                        <p>Quemado</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="view">
+                        <img class="d-block w-100" [src]="simg2" alt="Second slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="">Meilleur plage d'alhoceima soyez bienvenue</h3>
+                        <p>quemado</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="view">
+                        <img class="d-block w-100" [src]="simg3" alt="Third slide">
+                        <div class="mask rgba-black-slight"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="">Meilleur plage d'alhoceima</h3>
+                        <p>quemado</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="view">
+                        <img class="d-block w-100" [src]="simg4" alt="Third slide">
+                        <div class="mask rgba-black-slight"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h3 class="">Meilleur plage d'alhoceima</h3>
+                        <p>Queamdo</p>
+                    </div>
+                </div>
+            </div>
+            <!--/.Slides-->
+
+            <!--Controls-->
+            <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+
+      <!--text-->
+      
+      <div class="col-sm-8" id="button">
+          <h3 class="title">More details about {{ monument.name }}</h3>
+      </div>
+
+      <!--Descreption-->
+      
+      <div class="container thumbs">
+          <div class="col-sm-12">
+              <div class="thumbnail"> 
+                  <div class="caption">
+                      <h4 class="">{{ monument.name }}</h4>
+                      <p> {{ monument.description }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="text-center my-5">
+            <button class='btn btn-default' (click)="onBack()">Back </button>
+      </div>
+</div>

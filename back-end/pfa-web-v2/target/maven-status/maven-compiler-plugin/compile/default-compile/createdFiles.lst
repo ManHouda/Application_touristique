@@ -1,0 +1,12 @@
+com\controllers\TouristController.class
+com\rest\exceptions\handler\UserRestExceptionsHandler.class
+com\rest\controllers\CircuitController.class
+com\rest\controllers\MonumentController.class
+com\rest\controllers\ApplicationCotroller.class
+com\controllers\UserSpringController.class
+com\rest\controllers\RegionController.class
+com\utils\JwtResponse.class
+com\utils\LoginForm.class
+com\rest\exceptions\handler\ClientErrorResponse.class
+com\rest\controllers\UserController.class
+com\utils\MessageForm.class

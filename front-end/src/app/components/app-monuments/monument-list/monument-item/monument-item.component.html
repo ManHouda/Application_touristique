@@ -1,0 +1,14 @@
+<div class="col">
+  <div class="card mb-3" >
+      <div class="card-image" >
+          <img class="card-img-top"  src="{{ monument.imagePath }}" alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> {{ monument.name }} </h5>
+        <p class="card-text">Region : {{ monument.region }}</p>
+      </div>
+      <div class="btn-group mr-2">
+        <a [routerLink]="['details',monument.id]" class="btn btn-info btn-sm" >Details</a>
+      </div>
+  </div>
+</div>

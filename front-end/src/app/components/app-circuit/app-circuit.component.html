@@ -1,0 +1,142 @@
+<div class="container-fluid my-5">
+    
+        <div class="text-center mb-5">
+                <h3 class="title">Please fill this form to add a new  circuit!</h3>
+        </div>
+        <div class="container" id="signup">
+                <form (ngSubmit)="onRegister(f)" #f="ngForm">
+                    <div class="form-row">
+                        <div class="form-group row col-md-6">
+                            <label for="inputUsername"  class=" col-form-label">Start</label>
+                            <div class="col-sm-10">
+                                <select id="inputState" class="form-control mx-sm-3">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row col-md-6 ml-3">
+                            <label for="inputEmail" class=" col-form-label">&nbsp;&nbsp;&nbsp;End</label>
+                            <div class="col-sm-10">
+                                <select id="inputState" class="form-control mx-sm-3">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword"  class=" col-form-label">Select Monuments</label>
+                        <div class="col-sm-10">
+                                <ng-multiselect-dropdown
+                                [placeholder]="'select '"
+                                [data]="dropdownList"
+                                [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}"
+                                [settings]="dropdownSettings"
+                                (onSelect)="onItemSelect($event)"
+                                (onSelectAll)="onSelectAll($event)"
+                                >
+                                </ng-multiselect-dropdown>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputPassword"  class=" col-form-label">Select Monuments</label>
+                        <div class="col-sm-10">
+                                <ng-multiselect-dropdown
+                                [placeholder]="'select'"
+                                [data]="dropdownList"
+                                [(ngModel)]="selectedItems" [ngModelOptions]="{standalone: true}"
+                                [settings]="dropdownSettings"
+                                (onSelect)="onItemSelect($event)"
+                                (onSelectAll)="onSelectAll($event)"
+                                >
+                                </ng-multiselect-dropdown>
+                        </div>
+                    </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Add</button>
+                  </div>
+                </form>
+                <br>
+          </div>
+          
+
+
+            <div class="text-center mb-5">
+                <h1 class="title">Here is Your Circuit</h1>
+            </div>
+                  
+            <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="onClick($event)">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            </agm-map>
+            <!-- <div id="googleMap" #googleMap style="width:100%; height:500px"></div> -->
+
+            <div class="text-center my-5">
+                <h3 class="title">Circuit Information</h3>
+            </div>
+          
+            <div class="text-left ml-5">
+                <p >The Estimated time for this circuit is :  4 heurs et 50 min  
+                And The number of Kilometers  is : 143 km </p>
+            </div>
+           
+            
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Numero </th>
+                    <th scope="col">monument</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Km</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>la Méderasa Attarine</td>
+                    <td>30 min</td>
+                    <td>10 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Fontaine Nejjarine</td>
+                    <td>35 min </td>
+                    <td>13 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Volubilis</td>
+                    <td>1 heure et 40 min </td>
+                    <td>60 km</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Bab Mansour el Aleuj</td>
+                    <td>2 heure et 5 min</td>
+                    <td>70 km</td>
+                  </tr>
+                </tbody>
+              </table>
+            <div class="container" id="btnfb">
+
+                    <div class="text-center">
+                <facebook-share-button [share]="shareObj" ></facebook-share-button>
+
+                    </div>
+            </div>
+
+           
+ 
+
+ 
+
+ 
+
+            
+</div>
+
+
+
+

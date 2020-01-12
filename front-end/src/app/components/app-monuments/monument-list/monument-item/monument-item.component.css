@@ -1,0 +1,9 @@
+.card{
+    width: 18rem;
+}
+.card-img-top{
+    height: 14rem;
+}
+.btn-group, .btn {
+    width:100%;
+}

@@ -1,0 +1,26 @@
+  <h1 mat-dialog-title style="text-align: center">Login</h1>
+
+  <form  [formGroup]="form" >
+    <mat-dialog-content cols="2" rowHeight="300px">
+        <div class="container">
+          <mat-form-field>
+            <input  matInput formControlName="username" placeholder="Full Name" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input  matInput formControlName="password" type="password" placeholder="Password" required>
+          </mat-form-field>
+        </div>
+    </mat-dialog-content>
+
+     <mat-dialog-actions>
+      <button mat-raised-button color="primary" type="submit" (click)="onLogin()" [disabled]="!form.valid">Login</button>
+      
+      <div class="mb-5">
+        <label> <input type="checkbox" checked="checked" name="remember"> Remember me</label>
+        <span style="text-align: end;">Unregistred? <a   routerLink="/home#signup" fragment="signup"  (click)="navigateToSignup()">sign up.</a></span>
+      </div>
+    </mat-dialog-actions> 
+    
+  </form>
+  
+  <button mat-button mat-dialog-close style="display: block; max-width: 300px; margin: auto;">Cancel</button>
